@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Tech World</title>
+</head>
+
+<!-- CSS part-->
+    <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html,body{
+      display: grid;
+      height: 100%;
+      width: 100%;
+      place-items: center;
+      background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    }
+    .container{
+      overflow: hidden;
+      background: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+      margin-bottom: 150px;
+    }
+    .container .title-text{
+      display: flex;
+      width: 200%;
+    }
+    .container .title{
+      width: 50%;
+      font-size: 35px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .form-container .form-inner{
+      display: flex;
+      width: 200%;
+    }
+    .form-container .form-inner form{
+      width: 50%;
+    }
+    .form-inner form .field{
+      height: 55px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .form-inner form .field input{
+      height: 100%;
+      width: 100%;
+      padding-left: 15px;
+      border-radius: 5px;
+      border: 1px solid lightgrey;
+      border-bottom-width: 2px;
+      font-size: 17px;
+    }
+    .form-inner form .field input::placeholder{
+      color: gray;
+
+    }
+    form .field input:focus::placeholder{
+      color: gray;
+    }
+    .form-inner form .pass-link{
+      margin-top: 10px;
+    }
+    .form-inner form .signup-link{
+      text-align: center;
+      margin-top: 30px;
+    }
+    .form-inner form .pass-link a,
+    .form-inner form .signup-link a{
+      color: #fa4299;
+      text-decoration: none;
+    }
+    .form-inner form .pass-link a:hover,
+    .form-inner form .signup-link a:hover{
+      text-decoration: underline;
+    }
+    form .btn{
+      width: 100%;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    form .btn .btn-layer{
+      height: 100%;
+      width: 300%;
+     position: absolute;
+      background: -webkit-linear-gradient(right, #a445b2, #fa4299, #a445b2, #fa4299);
+    }
+    form .btn input[type="submit"]{
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background: none;
+      color: #fff;
+      font-size: 26px;
+      font-weight: 10000;
+      cursor: pointer;
+    }
+    .checkbox
+    {
+    margin-top:14px;
+    }
+    </style>
+<!--    CSS part ends here-->
+</head>
+<!--body starts here-->
+<body>
+<!--container starts here-->
+<div class="container">
+<!--    Title part of the container-->
+    <div class="title-text">
+        <div class="title login">Login</div>
+    </div>
+                 <!--form inner container starts here-->
+        <div class="form-inner">
+                <!--login form starts here-->
+             <form action="/login" method="post" class="login">{% csrf_token %}
+                <!--login form fields starts here-->
+                <div class="field">
+                    <input type="text" name="username" placeholder="Enter your User Name" required>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" placeholder="Enter your Password" required>
+                </div>
+
+                 <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+                <div class="field btn">
+                    <div class="btn-layer">
+                    </div>
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+                <!--login form ends here-->
+        </div>
+    </div>
+</div>
+</body>
+            <!--Body part ends here-->
+</html>

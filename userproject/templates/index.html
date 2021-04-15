@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logged in user</title>
+    <style>
+body
+{
+    /*resetting CSS*/
+    margin: 0px;
+    padding: 0px;
+    /*Adding background image*/
+    background: url("/static/bg.jpg");
+    /* stops image from repeating*/
+    background-repeat: no-repeat;
+    /*fits background image completely*/
+    background-size: cover;
+    /*setting content color of the body to be white*/
+    color: white;
+}
+.container
+{
+font-size: 40px;
+text-align:center;
+justify-content:center;
+position:relative;
+margin-top: 260px;
+color:black;
+}
+.con
+{
+font-size: 79px;
+}
+button
+{
+font-size:40px;
+border: 3px solid black;
+border-radius:8px;
+padding:10px 10px;
+color:white;
+background-color:black;
+cursor:pointer;
+margin-top:20px;
+left:300px;
+}
+a
+{
+text-decoration:none;
+}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="con">
+    welcome {{request.user}}!
+        </div>
+    <p>
+    This is the best website on this planet and you are very lucky to access it...
+    </p>
+    <button><a href="/logout">Logout</a></button>
+    </div>
+</body>
+</html>
